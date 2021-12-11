@@ -1,0 +1,54 @@
+<% layout('layouts/boilerplate')%>
+
+   <%- include('./partials/sandbox')%>
+
+      <main class="container py-5 d-flex flex-column align-items-center">
+         <h1>Elminator</h1>
+         <% if(members.length){ %>
+            <ul class="list-group">
+               <% for(let m of members){ %>
+                  <li
+                     class="list-group-item py-3 d-flex flex-column align-items-center justify-content-center flex-sm-row justify-content-sm-between">
+
+                     <p class="mb-0 lead d-flex align-items-center">
+                        <%= m.name %>
+                           <%= m.surname %>
+                     </p>
+
+                     <div class="linker d-flex align-items-center ms-sm-4">
+                        <img class="mouse d-none d-sm-flex me-2" src="/svgs/mouse.svg" width="15" height="15"
+                           alt="pointer">
+                        <a class="d-flex btn btn-outline-primary" href="/member/<%= m._id %>">Reveal My Target</a>
+                     </div>
+
+                  </li>
+                  <% } %>
+            </ul>
+            <% }else{ %>
+
+               <p class="display-6 row">
+                  <span class="col-12 text-center">
+                     All Set Up
+                  </span>
+                  <span class="col-12 text-center">
+                     You can play now!
+                  </span>
+               </p>
+
+               <form class="bg-white p-3 rounded border z-top d-flex flex-column" action="/remix" method="post">
+                  <div class="form-group">
+                     <label for="password" class="lead pb-2">Remix Targets</label>
+                     <input type="password" name="password" class="form-control mb-2" id="password"
+                        placeholder="Password" autocomplete>
+                  </div>
+
+                  <button class="btn btn-primary lead flex-grow-1">
+                     Submit
+                  </button>
+               </form>
+
+               <% } %>
+                  <img class="cat mt-5" src="/svgs/cat.svg" alt="playful cat">
+
+
+      </main>
