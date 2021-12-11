@@ -11,9 +11,9 @@ module.exports.showMember = async (req, res, next) => {
    const { id } = req.params;
 
    const member = await Member.findById(id);
-   // if (member == null || member.checked)
-   //    return next(new ExpressError("The member has already checked their target or doesn't exist!", 403));
-   // await Member.findByIdAndUpdate(id, { checked: true });
+   if (member == null || member.checked)
+      return next(new ExpressError("The member has already checked their target or doesn't exist!", 403));
+   await Member.findByIdAndUpdate(id, { checked: true });
 
 
    res.render('member', { member });
