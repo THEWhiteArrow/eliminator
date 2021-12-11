@@ -10,7 +10,7 @@ module.exports = [
       name: 'Mateusz',
       surname: 'Karandys',
       gender: 'male',
-      height: 170,
+      height: 174,
       weight: 57,
    },
    {
@@ -24,7 +24,7 @@ module.exports = [
       name: 'Janek',
       surname: 'Osiejewski',
       gender: 'male',
-      height: 179,
+      height: 181,
       weight: 67,
    },
    {
