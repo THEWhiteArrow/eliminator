@@ -23,7 +23,7 @@ module.exports.showMember = async (req, res, next) => {
 module.exports.remixTargets = async (req, res, next) => {
    const { password } = req.body;
 
-   if (password != process.env.REMIX_PASSWORD)
+   if (password != process.env.DRAW_AGAIN_PASSWORD)
       return next(new ExpressError("The password is incorrect!", 403));
 
 
