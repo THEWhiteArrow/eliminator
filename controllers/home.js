@@ -20,7 +20,7 @@ module.exports.showMember = async (req, res, next) => {
 
 }
 
-module.exports.remixTargets = async (req, res, next) => {
+module.exports.drawTargets = async (req, res, next) => {
    const { password } = req.body;
 
    if (password != process.env.DRAW_AGAIN_PASSWORD)
@@ -30,4 +30,8 @@ module.exports.remixTargets = async (req, res, next) => {
    await seedDB();
 
    res.redirect('/');
+}
+
+module.exports.showDrawPage = async (req, res) => {
+   res.render('draw');
 }

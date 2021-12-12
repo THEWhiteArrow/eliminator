@@ -1,0 +1,23 @@
+<% layout('layouts/boilerplate')%>
+
+   <%- include('./partials/sandbox',{squareClass:'square-blue'})%>
+
+      <main class="container py-5 d-flex flex-column align-items-center">
+
+         <h1>Draw Targets Again</h1>
+
+         <form class="bg-white mt-3 p-3 rounded border z-top d-flex flex-column" action="/draw" method="post">
+            <div class="form-group">
+               <label for="password" class="lead pb-2">Password</label>
+               <input type="password" name="password" class="form-control mb-2" id="password" placeholder="Password"
+                  autocomplete>
+            </div>
+
+            <button class="btn btn-primary lead flex-grow-1">
+               Submit
+            </button>
+         </form>
+
+         <a class="z-top link-primary pt-3" href="/">Go back to main page</a>
+         <img class="svg-decoration-mid mt-5" src="/svgs/assigment.svg" alt="playful decoration">
+      </main>

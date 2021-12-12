@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const memberSchema = new Schema({
+   date: {
+      type: String,
+      required: true
+   },
    checked: {
       type: Boolean,
       required: true,

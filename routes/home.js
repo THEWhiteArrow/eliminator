@@ -5,8 +5,9 @@ const catchAsync = require('../utils/catchAsync');
 const home = require('../controllers/home');
 
 
-router.route('/remix')
-   .post(catchAsync(home.remixTargets))
+router.route('/draw')
+   .get(catchAsync(home.showDrawPage))
+   .post(catchAsync(home.drawTargets))
 
 router.route('/member/:id')
    .get(catchAsync(home.showMember))

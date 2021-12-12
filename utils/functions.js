@@ -45,10 +45,15 @@ module.exports.seedDB = async () => {
 
 
    // console.log(arr);
+   let currentTime = new Date();
+   let date = currentTime.getFullYear() + '-' + (currentTime.getMonth() + 1) + '-' + currentTime.getDate() + '-' +
+      ('0' + currentTime.getHours()).slice(-2) + ":" + ('0' + currentTime.getMinutes()).slice(-2) + ":" +
+      ('0' + currentTime.getSeconds()).slice(-2)
 
    for (let i = 0; i < arr.length; ++i) {
 
       const member = new Member({
+         date,
          checked: false,
          ...arr[i]
       })

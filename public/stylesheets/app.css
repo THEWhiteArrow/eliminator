@@ -25,7 +25,7 @@ body{
    opacity:1;
 }
 
-.cat{
+.svg-decoration-mid{
    width:80%;
    max-width:500px;  
 }
@@ -53,8 +53,16 @@ body{
 }
 
 
-.square:hover{
+
+
+
+.square.square-blue:hover{
    background-color:#0D6EFD; 
+   transition:background-color 0.05s ease-in-out;
+}
+
+.square.square-red:hover{
+   background-color:#dc3545; 
    transition:background-color 0.05s ease-in-out;
 }
 
